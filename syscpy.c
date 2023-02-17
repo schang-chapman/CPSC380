@@ -1,10 +1,22 @@
+#include <errno.h>
+#include <fcntl.h>
 #include <stdio.h>
+#include <string.h>
+#include <sys/syscall.h>
+#include <sys/types.h>
 
-int main(char [] inFile, char [] outFile)
+int main(int argc, char *paths[])
 {
-    // Try/except: Check if file exists, throw error if not
+    char *inPath = paths[1];
+    char *outPath = paths[2];
 
-    // Try/except: Check if output file can be written, throw error if not
+    // Open input file to read, throw error if can't.
 
-    // Write to output file
+    // Open output file to write, throw error if can't.
+
+    // Write to output file.
+
+    // Close input and output files.
+
+    return 0;
 }
