@@ -7,6 +7,7 @@
 
 int main(int argc, char *paths[])
 {
+    // Get paths from input.
     char *inPath = paths[1];
     char *outPath = paths[2];
 
