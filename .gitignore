@@ -1,6 +1,10 @@
 *
 
 !.gitignore
+
+!/Assignment1
 !ex.txt
 !README.md
 !syscpy.c
+
+!/Assignment2
