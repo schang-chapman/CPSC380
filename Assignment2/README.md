@@ -9,17 +9,19 @@ This project uses C to create a shell interface that can accept and execute user
   * I thought this had something to do with buffering problems on my output stream but I put flushes everywhere and still couldn't get rid of it so now I give up.
 
 ### References
-* Getting user input in C
+* Getting user input
   * https://www.tutorialspoint.com/c_standard_library/c_function_fgets.htm
-* String tokenizer in C
+* Stripping newlines
+  * https://stackoverflow.com/questions/2693776/removing-trailing-newline-character-from-fgets-input
+* String to array tokenization
   * https://www.tutorialspoint.com/c_standard_library/c_function_strtok.htm
-* String comparison in C
+* String comparison
   * https://www.programiz.com/c-programming/library-function/string.h/strcmp
-* fork() in C
+* fork() usage
   * https://www.geeksforgeeks.org/fork-system-call/
-* execvp() in C
+* execvp() usage
   * https://www.qnx.com/developers/docs/6.5.0SP1.update/com.qnx.doc.neutrino_lib_ref/e/execvp.html
-* wait() in C
+* wait() usage
   * https://www.geeksforgeeks.org/wait-system-call-c/
 
 ### Source File(s)

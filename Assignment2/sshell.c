@@ -4,11 +4,11 @@
 #include <sys/wait.h>
 #include <unistd.h>
 
-#define MAX_LINE 80 //The maximum length command
+#define MAX_LINE 80 // The maximum length command
 
 int main (void) {
-    char *args[MAX_LINE/2 + 1]; //Command line arguments
-    int shouldRun = 1; //Flag to determine when to exit program
+    char *args[MAX_LINE/2 + 1]; // Command line arguments
+    int shouldRun = 1; // Flag to determine when to exit program
 
     while (shouldRun) {
         printf("osh>");
@@ -29,7 +29,7 @@ int main (void) {
         cmdLine[cmdLen-1] = '\0';
         cmdLine[strcspn(cmdLine, "\n")] = 0;
 
-        // String tokenization
+        // String to array tokenization
         char *cmdToken = strtok(cmdLine, " ");
         int i = 0;
         int shouldWait = 0;
