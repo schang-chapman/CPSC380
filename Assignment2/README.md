@@ -5,7 +5,7 @@
 
 This project uses C to create a shell interface that can accept and execute user commands.
 ### Known Bugs/Errors
-* "osh>" will not appear immediately after completing an input command. Instead, an empty newline appears. Hit enter on this newline to see "osh>" again.
+* "osh>" will not appear immediately after completing an input command. Instead, the shell stays stuck at the end of the command's output. Hit enter after completing a command to see "osh>" again.
   * I thought this had something to do with buffering problems on my output stream but I put flushes everywhere and still couldn't get rid of it so now I give up.
 
 ### References
@@ -28,3 +28,10 @@ This project uses C to create a shell interface that can accept and execute user
 ### Build Instructions
 1. gcc sshell.c -o sshell
 2. ./sshell
+
+### Example Output
+```
+osh>cat ex.txt
+osh>This is an example.
+osh>exit
+```
