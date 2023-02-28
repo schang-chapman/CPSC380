@@ -1,3 +1,4 @@
+#include <errno.h>
 #include <stdio.h>
 #include <string.h>
 #include <sys/wait.h>
@@ -52,13 +53,13 @@ int main (void) {
         if (pid == 0) {
             // execvp() error catch
             if (execvp(args[0], args) == -1) {
-                fprintf(stderr, "execvp() function failed.\n");
+                printf("Error with execvp(): %s\n", strerror(errno));
             } else {
                 return 0;
             }
         // fork() error catch
         } else if (pid < 0) {
-            fprintf(stderr, "fork() function failed.\n");
+            printf("Error with fork(): %s\n", strerror(errno));
             return -1;
         // Parent check to invoke wait()
         } else if (pid > 0) {
@@ -66,7 +67,6 @@ int main (void) {
                 wait(NULL);
             }
         }
-
     }
 
     return 0;
