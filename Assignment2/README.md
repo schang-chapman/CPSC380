@@ -6,7 +6,12 @@
 This project uses C to create a shell interface that can accept and execute user commands.
 
 ### References
-* TODO
+* Getting user input in C
+  * https://www.tutorialspoint.com/c_standard_library/c_function_fgets.htm
+* String tokenizer in C
+  * https://www.tutorialspoint.com/c_standard_library/c_function_strtok.htm
+* String comparison in C
+  * https://www.programiz.com/c-programming/library-function/string.h/strcmp
 
 ### Source File(s)
 * TODO
