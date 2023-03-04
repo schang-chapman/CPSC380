@@ -1,11 +1,14 @@
 *
 
 !.gitignore
-
-!/Assignment1
 !ex.txt
 !README.md
+
+!/Assignment1
 !syscpy.c
 
 !/Assignment2
 !sshell.c
+
+!/Assignment3
+!mcarlo.c
