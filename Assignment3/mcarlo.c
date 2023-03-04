@@ -37,7 +37,6 @@ int main(int argc, char* points[]) {
 
     // Get number of points from input
     npoints = atoi(points[1]);
-    printf("Points Generated: %d\n", npoints);
 
     // Create & join thread
     int threadInt;
@@ -53,5 +52,8 @@ int main(int argc, char* points[]) {
         printf("Thread join error: %s\n", strerror(errno));
     }
 
-    printf("Points in Circle: %d\n", hitCount);
+    // Calculation of pi
+    double piEst = 4 * ((double)hitCount / npoints);
+    printf("Estimated Value of Pi: %f\n", piEst);
+    return 0;
 }

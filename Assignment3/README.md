@@ -6,7 +6,8 @@
 This project uses C to run Monte Carlo simulations that estimate the value of pi.
 
 ### Known Bugs/Errors
-* -
+* Peak accuracy is with ~70 points. Going past 70 will start making it progressively less accurate to the value of pi.
+  (I think this is supposed to happen but I'm listing it here just in case.)
 
 ### References
 * Threads example files from class
