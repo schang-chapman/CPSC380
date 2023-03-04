@@ -40,7 +40,6 @@ int main(int argc, char* points[]) {
 
     // Create & join thread
     int threadInt;
-
     threadInt = pthread_create(&tid,&attr,runner,points[1]);
     // Create error check
     if (threadInt != 0) {
