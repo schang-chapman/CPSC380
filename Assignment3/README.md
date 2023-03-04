@@ -9,7 +9,8 @@ This project uses C to run Monte Carlo simulations that estimate the value of pi
 * -
 
 ### References
-* -
+* Threads example files from class
+
 ### Source File(s)
 * mcarlo.c
 
