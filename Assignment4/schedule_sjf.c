@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "list.h"
+#include "cpu.h"
 
 struct node* head = NULL;
 
@@ -13,9 +13,36 @@ void add(char *name, int priority, int burst){
     task->burst = burst;
 
     // Insert to list
-    insertTail(&head, task);
+    insert(&head, task);
 } 
 
 void schedule(){
-    //TODO
+    // Sort the LinkedList
+    struct node* iterateNode = head;
+    struct node* compareNode = NULL;
+    Task *tempTask = malloc(sizeof(Task));
+
+    // Loop to iterate thru LinkedList
+    while (iterateNode != NULL) {
+        compareNode = iterateNode;
+        // Loop to compare data for sorting (Traverse to second to last node)
+        while (compareNode->next != NULL) {
+            // Compare burst of current node and next node
+            if (compareNode->task->burst < compareNode->next->task->burst) {
+                // Swap tasks
+                tempTask = compareNode->task;
+                compareNode->task = compareNode->next->task;
+                compareNode->next->task = tempTask;
+            }
+            compareNode = compareNode->next; // Traverse
+        }
+        iterateNode = iterateNode->next; // Traverse
+    }
+
+    // Loop to run tasks in LinkedList
+    iterateNode = head;
+    while (iterateNode != NULL) {
+        run(iterateNode->task, iterateNode->task->burst);
+        iterateNode = iterateNode->next;
+    }
 }

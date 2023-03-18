@@ -13,7 +13,7 @@ void add(char *name, int priority, int burst){
     task->burst = burst;
 
     // Insert to list
-    insertTail(&head, task);
+    insert(&head, task);
 } 
 
 // Sort the LinkedList by each task's priority and run them

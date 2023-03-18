@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "list.h"
+#include "cpu.h"
 
 struct node* head = NULL;
 
@@ -17,5 +17,12 @@ void add(char *name, int priority, int burst){
 } 
 
 void schedule(){
-    //TODO
+    struct node* iterateNode = head;
+
+    // Loop to run tasks in LinkedList
+    iterateNode = head;
+    while (iterateNode != NULL) {
+        run(iterateNode->task, iterateNode->task->burst);
+        iterateNode = iterateNode->next;
+    }
 }
