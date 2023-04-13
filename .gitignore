@@ -30,3 +30,7 @@
 !schedule.txt
 !schedulers.h
 !task.h
+
+!/Assignment5
+!buffer.h
+!prodcon.c
