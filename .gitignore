@@ -34,3 +34,8 @@
 !/Assignment5
 !buffer.h
 !prodcon.c
+
+!/Assignment6
+!addresses.txt
+!BACKING_STORE.bin
+!vmmgr.c
